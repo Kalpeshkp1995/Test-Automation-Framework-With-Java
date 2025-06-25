@@ -22,7 +22,7 @@ public class TestBase {
 	@Parameters({ "browser", "isLambdaTest", "isHeadless" })
 	@BeforeMethod(description = "load the homepage of the website")
 	public void setup(
-		@Optional("chrome")	String browser,
+		@Optional("CHROME")	String browser,
 		@Optional("false")boolean isLambdaTest, 
 		@Optional("True")boolean isHeadless,ITestResult result) {
 		this.isLambdaTest = isLambdaTest;
@@ -33,9 +33,12 @@ public class TestBase {
 			homePage = new HomePage(lambdaDriver);
 
 		} else {
-			// Running Test on Local Machine
 			logger.info("load the homepage of the website");
-			homePage = new HomePage(Browser.valueOf(browser.toUpperCase()), isHeadless);
+
+			// Safely convert the string to enum
+			Browser browserEnum = Browser.valueOf(browser.trim().toUpperCase());
+
+			homePage = new HomePage(browserEnum, isHeadless);
 
 		}
 
