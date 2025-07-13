@@ -1,5 +1,5 @@
 
-name: Test Automatiom Workflow
+name: Test Automation Workflow
 
 on:
   schedule:
