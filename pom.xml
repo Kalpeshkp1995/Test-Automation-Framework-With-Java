@@ -46,13 +46,13 @@
     <version>4.25.0</version>
 </dependency>
   
-
 <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
     <version>7.10.2</version>
     <scope>test</scope>
 </dependency>
+
 
 <dependency>
   <groupId>com.google.code.gson</groupId>
@@ -94,6 +94,12 @@
     <groupId>com.aventstack</groupId>
     <artifactId>extentreports</artifactId>
     <version>5.1.2</version>
+</dependency>
+
+<dependency>
+    <groupId>com.github.javafaker</groupId>
+    <artifactId>javafaker</artifactId>
+    <version>1.0.2</version>
 </dependency>
 
   </dependencies>
